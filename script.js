@@ -188,54 +188,44 @@ function marqueAnimation(){
   
   
 }
-// LocomotiveAnimation()
-// page1Text()
-// cursorAnimation()
-// curveAnimation()
-// imageAnime1()
-// marqueAnimation()
+
+function page6Animation(){
 
 
-
-
-var box1 = document.querySelector(".page6 #box1")
-var box2 = document.querySelector(".page6 #box2")
-var page6 = document.querySelector(".page6")
-var movingimgDiv = document.querySelector(".page6 #moving-img ")
-var moveimg = document.querySelector(".page6 #moving-img img")
-
-box1.addEventListener("mouseenter" , function(){
-  page6.style.backgroundColor = "#FFD7E7"
-  box2.style.opacity = "0.6"
-  var img2 = moveimg.setAttribute( "src","https://www.brandium.nl/wp-content/uploads/SK@4x-100-Brandium.jpg") 
-  movingimgDiv.style.opacity = 1 
-})
-box1.addEventListener("mouseleave" , function(){
-  page6.style.backgroundColor = "#F9F7F4"
-  box2.style.opacity = "1"
-  movingimgDiv.style.opacity = 0
-
-})
-page6.addEventListener("mousemove", function(dets){
- gsap.from( "#moving-img ", {
-  x : dets.x ,
-  y  : dets.y
- })
- gsap.to( "#moving-img ", {
-  x : dets.x ,
-  y  : dets.y ,
-
- })
-})
-box2.addEventListener("mouseenter" , function(){
-  page6.style.backgroundColor = "#BAC4E2"
-  box1.style.opacity = "0.6"
-  movingimgDiv.style.opacity = 1
-  var img2 = moveimg.setAttribute( "src","https://www.brandium.nl/wp-content/uploads/killer-brand-image.jpg") 
-})
-box2.addEventListener("mouseleave" , function(){
-  page6.style.backgroundColor = "#F9F7F4"
-  box1.style.opacity = "1"
-  movingimgDiv.style.opacity = 0
-})
-
+  var box1 = document.querySelector(".page6 #box1")
+  var box2 = document.querySelector(".page6 #box2")
+  var page6 = document.querySelector(".page6")
+  var movingimgDiv = document.querySelector(".page6 #moving-img ")
+  var moveimg = document.querySelector(".page6 #moving-img img")
+  
+  box1.addEventListener("mouseenter" , function(){
+    page6.style.backgroundColor = "#FFD7E7"
+    box2.style.opacity = "0.6"
+  
+  })
+  box1.addEventListener("mouseleave" , function(){
+    page6.style.backgroundColor = "#F9F7F4"
+    box2.style.opacity = "1"
+  
+  
+  })
+  
+  box2.addEventListener("mouseenter" , function(){
+    page6.style.backgroundColor = "#BAC4E2"
+    box1.style.opacity = "0.6"
+  })
+  box2.addEventListener("mouseleave" , function(){
+    page6.style.backgroundColor = "#F9F7F4"
+    box1.style.opacity = "1"
+    
+  })
+  
+  
+}
+LocomotiveAnimation()
+page1Text()
+cursorAnimation()
+curveAnimation()
+imageAnime1()
+marqueAnimation()
+page6Animation()
