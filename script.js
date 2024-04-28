@@ -93,26 +93,30 @@ function cursorAnimation(){
   })
 }
 
-function curveAnimation(){
-  var path = `M 10 80 Q 500 80 990 80` 
-var finalpath = `M 10 80 Q 500 80 990 80`
-var string = document.querySelector("#string")
-string.addEventListener("mousemove",function(dets){
-  path =`M 10 80 Q ${dets.x} ${dets.y} 990 80` 
-  gsap.to(".page2 svg path",{
-    attr :{d:path},
+function strechLine(){
+  var string = document.querySelectorAll("#string")
+  var myPath = d="M 10 80 Q 500 80 990 80";
+  var finalPath = d="M 10 80 Q 500 80 990 80"
+  string.forEach(function(elem){
+    elem.addEventListener("mousemove",function(dets){
+      myPath = `M 10 80 Q ${dets.x} ${dets.y} 990 80 `
+      gsap.to(" #main svg path",{
+          attr:({d:myPath}),
+          ease: "elastic.out(1,0.2)",
+          duration:1.5,
+      })
   })
-})
-string.addEventListener("mouseleave",function(){
-  gsap.to(".page2 svg path",{
-    attr:{d:finalpath},
-    ease: "elastic.out(1,0.2)",
-    duration :1
-  })
-})
-
-}
+  elem.addEventListener("mouseleave",function(dets){
+      gsap.to("#main svg path",{
+          attr:({d:finalPath}),
+          ease: "elastic.out(1,0.2)",
+          duration:1.5,
   
+      })
+  })
+  })
+}
+
 function imageAnime1() {
   
  var  elemContainer = document.querySelector("#elem-container")
@@ -225,7 +229,8 @@ function page6Animation(){
 LocomotiveAnimation()
 page1Text()
 cursorAnimation()
-curveAnimation()
+strechLine()
 imageAnime1()
+imageAnime2()
 marqueAnimation()
 page6Animation()

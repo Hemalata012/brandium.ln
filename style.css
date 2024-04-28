@@ -52,7 +52,8 @@ nav{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-     
+    mix-blend-mode: difference;
+
 position: fixed;
 width: 100%;
 z-index: 99;
@@ -60,7 +61,9 @@ padding: 2vw 1vw;
 }
 nav svg{
     height: 4vw;
-  
+    mix-blend-mode: difference;
+    fill: white;
+ z-index: 999 !important;
 }
 #nav-part2{
 
@@ -72,6 +75,7 @@ nav svg{
     font-weight: 500;
     text-transform: uppercase;
     mix-blend-mode: difference;
+    color: white; 
     margin-bottom: 5px;
     font-family: brand ;
     transition: all ease 1s;
@@ -241,14 +245,19 @@ margin-top: 40px;
 font-size: 1.2vw;
 
 }
-.page3 #string{
-    margin-left: 4vw;
-
-    height: 170px;
+.page3 #string svg{
+    margin-top: -40px;
+}
+ .page3 #string{
+    height: 160px;
+    width: 1000px;
+   margin-top: 20px;
+  
 }
 .page4{
     min-height: 100vh;
     width: 100%;
+    
     background-color: #F9F7F4;
    border-top-left-radius : 150px ;
    border-top-right-radius : 150px ;
